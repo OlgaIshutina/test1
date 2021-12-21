@@ -44,16 +44,23 @@ class Human(object):
         self.adress = adress
     def getAdress(self):
         return self.adress
+    def DoWork(self):
+        print("живет")
+
 class Worker(Human):
-    pass
+    def DoWork(self):
+        print("работает")
 
 class Student(Human):
-    pass
-
+    def DoWork(self):
+        print("учится")
 
 Human1 = Human("Иванов", 55, 12345, "NSK", "Russia", "Lenina, 8" )
 Human1.printinfo()
 Human1.setNumber(54325)
 Human1.printinfo()
 print(Human1.getAdress())
-
+Human2 = Worker("Петров", 12, 5455566, "NSK", "Russia", "Lenina, 10")
+Human2.DoWork()
+Human3 = Student("Петров", 12, 5455566, "NSK", "Russia", "Lenina, 10")
+Human3.DoWork()
